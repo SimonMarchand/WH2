@@ -10,4 +10,9 @@ class Client extends Model
     {
         $this->belongsTo('App\Models\User');
     }
+
+    public function machines()
+    {
+        $this->hasMany('App\Models\Machine');
+    }
 }
