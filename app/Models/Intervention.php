@@ -20,4 +20,9 @@ class Intervention extends Model
     {
         $this->belongsTo('App\Models\InterventionType');
     }
+
+    public function reportImages()
+    {
+        $this->hasMany('App\Models\ReportImage');
+    }
 }
