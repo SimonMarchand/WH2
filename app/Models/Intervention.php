@@ -10,4 +10,9 @@ class Intervention extends Model
     {
         $this->belongsTo('App\Models\Machine');
     }
+
+    public function technician()
+    {
+        $this->belongsTo('App\Models\Technician');
+    }
 }

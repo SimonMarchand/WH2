@@ -10,4 +10,9 @@ class Technician extends Model
     {
         $this->belongsTo('App\Models\User');
     }
+
+    public function interventions()
+    {
+        $this->hasMany('App\Models\Intervention');
+    }
 }
