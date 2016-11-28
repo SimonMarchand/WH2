@@ -13,6 +13,6 @@ class Machine extends Model
 
     public function interventions()
     {
-        $this->hasMany('App\Models\Intervention');
+        $this->belongsToMany('App\Models\Intervention');
     }
 }
