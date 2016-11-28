@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Intervention extends Model
 {
-    public function machine()
+    public function machines()
     {
-        $this->belongsTo('App\Models\Machine');
+        $this->belongsToMany('App\Models\Machine');
     }
 
     public function technicians()

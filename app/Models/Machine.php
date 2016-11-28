@@ -8,6 +8,11 @@ class Machine extends Model
 {
     public function client()
     {
-        $this->belongsTo('App\Models\Clients');
+        $this->belongsTo('App\Models\Client');
+    }
+
+    public function interventions()
+    {
+        $this->hasMany('App\Models\Intervention');
     }
 }
