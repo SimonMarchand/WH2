@@ -8,21 +8,21 @@ class Intervention extends Model
 {
     public function machines()
     {
-        $this->belongsToMany('App\Models\Machine');
+        return $this->belongsToMany('App\Models\Machine');
     }
 
     public function technicians()
     {
-        $this->belongsToMany('App\Models\Technician');
+        return $this->belongsToMany('App\Models\Technician');
     }
 
     public function interventionType()
     {
-        $this->belongsTo('App\Models\InterventionType');
+        return $this->belongsTo('App\Models\InterventionType');
     }
 
     public function reportImages()
     {
-        $this->hasMany('App\Models\ReportImage');
+        return $this->hasMany('App\Models\ReportImage');
     }
 }

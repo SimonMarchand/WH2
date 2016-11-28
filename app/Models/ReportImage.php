@@ -8,6 +8,6 @@ class ReportImage extends Model
 {
     public function intervention()
     {
-        $this->belongsTo('App\Models\Intervention');
+        return $this->belongsTo('App\Models\Intervention');
     }
 }

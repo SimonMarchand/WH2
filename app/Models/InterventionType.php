@@ -8,6 +8,6 @@ class InterventionType extends Model
 {
     public function tools()
     {
-        $this->belongsToMany('App\Models\Tool');
+        return $this->belongsToMany('App\Models\Tool');
     }
 }

@@ -8,11 +8,11 @@ class Technician extends Model
 {
     public function user()
     {
-        $this->belongsTo('App\Models\User');
+        return $this->belongsTo('App\Models\User');
     }
 
     public function interventions()
     {
-        $this->belongsToMany('App\Models\Intervention');
+        return $this->belongsToMany('App\Models\Intervention');
     }
 }

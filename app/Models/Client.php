@@ -8,11 +8,11 @@ class Client extends Model
 {
     public function user()
     {
-        $this->belongsTo('App\Models\User');
+        return $this->belongsTo('App\Models\User');
     }
 
     public function machines()
     {
-        $this->hasMany('App\Models\Machine');
+        return $this->hasMany('App\Models\Machine');
     }
 }
