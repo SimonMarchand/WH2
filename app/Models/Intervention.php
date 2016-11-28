@@ -11,9 +11,9 @@ class Intervention extends Model
         $this->belongsTo('App\Models\Machine');
     }
 
-    public function technician()
+    public function technicians()
     {
-        $this->belongsTo('App\Models\Technician');
+        $this->belongsToMany('App\Models\Technician');
     }
 
     public function interventionType()
