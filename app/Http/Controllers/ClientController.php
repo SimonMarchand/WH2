@@ -28,12 +28,14 @@ class ClientController extends Controller
         $user->password = $request->get('password');
         $user->phone = $request->get('phone');
         $user->save();
+
         $client = new Client();
         $client->city = $request->get('city');
         $client->postalCode = $request->get('postalCode');
         $client->address1 = $request->get('address1');
-        $client->user_id = $user->id;
+        $client->user()->associate($user);
         $client->save();
+
         return redirect(route('clients.index'));
     }
 
